@@ -11,7 +11,7 @@ public class Starter {
 			SQLiteManager sqLiteMenager = new SQLiteManager();
 			sqLiteMenager.selectAll();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			logger.error(e.getMessage());
 		}
 	}
 }
