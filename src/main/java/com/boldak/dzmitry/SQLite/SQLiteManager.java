@@ -1,5 +1,6 @@
-package boldak.dzmitry.SQLite;
+package com.boldak.dzmitry.SQLite;
 
+import com.boldak.dzmitry.Starter;
 import org.apache.log4j.Logger;
 import org.sqlite.SQLiteException;
 
@@ -7,7 +8,7 @@ import java.sql.*;
 
 public class SQLiteManager {
 	// Getting logger from main instance
-	private final Logger logger = Logger.getLogger("Starter");
+	private final Logger logger = Logger.getLogger(Starter.class.getName());
 
 	// Current datebase connection
 	private final Connection conn;
@@ -36,15 +37,14 @@ public class SQLiteManager {
 	 * @throws SQLiteException When smth wrong with datebasse or querry
 	 */
 	public void selectAll() throws SQLException {
-		String query = "SELECT `id`, `username` FROM `users`";
+		String query = "SELECT `id`, `name`, `subject1`, `subject2`, `subject3`, `accepted` FROM `users`";
 
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(query);
 
 		// loop through the result set
 		while (rs.next()) {
-			logger.info(rs.getInt("id") + "\t" +
-					rs.getString("username") + "\t");
+			logger.info(new SQLiteUsersObject(rs));
 		}
 	}
 }
