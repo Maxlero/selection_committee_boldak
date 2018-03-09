@@ -1,4 +1,4 @@
-package com.boldak.dzmitry.Interfaces;
+package by.grsu.boldak.interfaces;
 
 public interface StringableObject {
 	@Override

@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class StarterTest {
 	@Test
 	public void testStarter() throws Exception {
-//		com.boldak.dzmitry.Starter starter = new com.boldak.dzmitry.Starter();
+//		Starter starter = new Starter();
 //		Assert.assertThat(starter.getSmth(), CoreMatchers.is("test"));
 	}
 }

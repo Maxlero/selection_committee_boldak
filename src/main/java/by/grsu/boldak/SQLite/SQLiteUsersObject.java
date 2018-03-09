@@ -1,6 +1,4 @@
-package com.boldak.dzmitry.SQLite;
-
-import com.boldak.dzmitry.Interfaces.StringableObject;
+package by.grsu.boldak.sqlite;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;

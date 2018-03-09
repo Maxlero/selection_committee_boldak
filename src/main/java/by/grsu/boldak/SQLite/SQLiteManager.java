@@ -1,6 +1,6 @@
-package com.boldak.dzmitry.SQLite;
+package by.grsu.boldak.sqlite;
 
-import com.boldak.dzmitry.Starter;
+import by.grsu.boldak.Starter;
 import org.apache.log4j.Logger;
 import org.sqlite.SQLiteException;
 
@@ -37,7 +37,7 @@ public class SQLiteManager {
 	 * @throws SQLiteException When smth wrong with datebasse or querry
 	 */
 	public void selectAll() throws SQLException {
-		String query = "SELECT `id`, `name`, `subject1`, `subject2`, `subject3`, `accepted` FROM `users`";
+		String query = "SELECT * FROM `users`";
 
 		Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery(query);
