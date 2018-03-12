@@ -14,14 +14,7 @@
 
 </head>
 <body>
-<header>
-    <!-- Image and text -->
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img th:src="@{/img/DimasosLogo.png}" width="30" height="30" class="d-inline-block align-top" alt="">
-            Dimasos University
-        </a>
-    </nav>
+<header th:replace="fragments/header :: head">
 </header>
 <section id="faces">
     <div class="faces-container-first-row">
@@ -63,29 +56,29 @@
             <div class="faces-grid">
                 <div class="row text-center">
                     <div class="col-sm-6">
-                        <img th:src="@{/img/faces/MaxO.png}" class="face face-2-r">
+                        <img th:src="@{/img/faces/AlexR.png}" class="face face-2-r">
                     </div>
                     <div class="col-sm-6">
-                        <img th:src="@{/img/faces/MaxO.png}" class="face face-1-r">
+                        <img th:src="@{/img/faces/AlexR.png}" class="face face-1-r">
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col-sm-4">
-                        <img th:src="@{/img/faces/MaxO.png}" class="face face-5-r">
+                        <img th:src="@{/img/faces/AlexR.png}" class="face face-5-r">
                     </div>
                     <div class="col-sm-4">
-                        <img th:src="@{/img/faces/MaxO.png}" class="face face-4-r">
+                        <img th:src="@{/img/faces/AlexR.png}" class="face face-4-r">
                     </div>
                     <div class="col-sm-4">
-                        <img th:src="@{/img/faces/MaxO.png}" class="face face-3-r">
+                        <img th:src="@{/img/faces/AlexR.png}" class="face face-3-r">
                     </div>
                 </div>
                 <div class="row text-center">
                     <div class="col-sm-6">
-                        <img th:src="@{/img/faces/MaxO.png}" class="face face-7-r">
+                        <img th:src="@{/img/faces/AlexR.png}" class="face face-7-r">
                     </div>
                     <div class="col-sm-6">
-                        <img th:src="@{/img/faces/MaxO.png}" class="face face-6-r">
+                        <img th:src="@{/img/faces/AlexR.png}" class="face face-6-r">
                     </div>
                 </div>
             </div>
@@ -97,7 +90,7 @@
         </div>
     </div>
 </section>
-
+</div>
 <script type="text/javascript" src="webjars/jquery/3.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="webjars/popper.js/1.12.9-1/popper.min.js"></script>
 <script type="text/javascript" src="webjars/bootstrap/4.0.0-1/js/bootstrap.min.js"></script>
