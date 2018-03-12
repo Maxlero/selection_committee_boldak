@@ -1,19 +1,14 @@
 package by.grsu.boldak;
 
-import by.grsu.boldak.sqlite.SQLiteManager;
 import org.apache.log4j.Logger;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.sql.SQLException;
-
+@SpringBootApplication
 public class Starter {
 	private static final Logger logger = Logger.getLogger(Starter.class);
 
-	public static void main(String args[]) {
-		try {
-			SQLiteManager sqLiteMenager = new SQLiteManager();
-			sqLiteMenager.selectAll();
-		} catch (SQLException e) {
-			logger.error(e.getMessage());
-		}
+	public static void main(String[] args) {
+		SpringApplication.run(Starter.class, args);
 	}
 }
