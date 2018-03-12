@@ -99,6 +99,16 @@
     margin: auto;
 }
 
+@media screen and (max-width: 1000px) {
+    .right-faces {
+        display: none;
+    }
+
+    .left-faces {
+        display: none;
+    }
+}
+
 .face-1-l {
     width: 30px;
     margin-right: 20px;
@@ -209,4 +219,10 @@
     margin: auto;
     font-size: 2.4rem;
     color: #9feaf9;
+}
+
+@media screen and (max-width: 822px) {
+    .faces-container-second-row {
+        height: 160px;
+    }
 }
