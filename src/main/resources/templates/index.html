@@ -5,16 +5,98 @@
     <title>Selection committee</title>
 
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-1/css/bootstrap.min.css"/>
 
     <!-- My styles -->
 
     <link rel="stylesheet" th:href="@{/css/styles.css}"
-          href="../static/css/styles.css" />
+          href="../static/css/styles.css"/>
 
 </head>
 <body>
-test
+<header>
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img th:src="@{/img/DimasosLogo.png}" width="30" height="30" class="d-inline-block align-top" alt="">
+            Dimasos University
+        </a>
+    </nav>
+</header>
+<section id="faces">
+    <div class="faces-container-first-row">
+        <div class="left-faces">
+            <div class="faces-grid">
+                <div class="row text-center">
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-1-l">
+                    </div>
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-2-l">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-3-l">
+                    </div>
+                    <div class="col-sm-4">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-4-l">
+                    </div>
+                    <div class="col-sm-4">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-5-l">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-6-l">
+                    </div>
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-7-l">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logo-univ">
+            <img th:src="@{/img/DimasosLogo.png}">
+        </div>
+        <div class="right-faces">
+            <div class="faces-grid">
+                <div class="row text-center">
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-2-r">
+                    </div>
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-1-r">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-sm-4">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-5-r">
+                    </div>
+                    <div class="col-sm-4">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-4-r">
+                    </div>
+                    <div class="col-sm-4">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-3-r">
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-7-r">
+                    </div>
+                    <div class="col-sm-6">
+                        <img th:src="@{/img/faces/MaxO.png}" class="face face-6-r">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="faces-container-second-row text-center">
+        <div class="univ-text">
+            Димасосский университет набирает студентов
+        </div>
+    </div>
+</section>
 
 <script type="text/javascript" src="webjars/jquery/3.0.0/jquery.min.js"></script>
 <script type="text/javascript" src="webjars/popper.js/1.12.9-1/popper.min.js"></script>
