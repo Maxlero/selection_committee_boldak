@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Dimasos University - Авторизация</title>
+
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-1/css/bootstrap.min.css"/>
+
+    <!-- FA 5 -->
+    <link rel="stylesheet" href="webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome-all.min.css"/>
+
+    <!-- My styles -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}"
+          href="../static/css/styles.css"/>
 </head>
 <body>
-
+<header th:replace="fragments/header :: head"></header>
+<section id="auth">
+    <div class="auth-form">
+        <div class="auth-logo">
+            <img src="../static/img/DimasosLogo.png" th:src="@{/img/DimasosLogo.png}" alt="">
+        </div>
+        <form href="/auth">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="username"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Логин" aria-label="Username" aria-describedby="username">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="password"><i class="fas fa-unlock"></i></span>
+                </div>
+                <input type="password" class="form-control" placeholder="Пароль" aria-label="Username" aria-describedby="password">
+            </div>
+            <div class="custom-control custom-checkbox center-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Запомнить</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block pad-auth-btn">Войти</button>
+        </form>
+    </div>
+</section>
+<script type="text/javascript" src="webjars/jquery/3.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="webjars/popper.js/1.12.9-1/popper.min.js"></script>
+<script type="text/javascript" src="webjars/bootstrap/4.0.0-1/js/bootstrap.min.js"></script>
 </body>
 </html>
