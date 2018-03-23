@@ -21,25 +21,41 @@
         <div class="auth-logo">
             <img src="../static/img/DimasosLogo.png" th:src="@{/img/DimasosLogo.png}" alt="">
         </div>
-        <form href="/auth">
+        <!--/*@thymesVar id="error" type="by.grsu.boldak.controllers.AuthController"*/-->
+        <!--/*@thymesVar id="auth" type="by.grsu.boldak.models.AuthenticateForm"*/-->
+        <form href="/auth" action="#" th:action="@{/auth}" th:object="${auth}" method="post">
+            <div class="error-text" th:if="${error}">Неверный логин или пароль!</div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="username"><i class="fas fa-user"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="Логин" aria-label="Username" aria-describedby="username">
+                <!--/*@thymesVar id="username" type="by.grsu.boldak.models.AuthenticateForm"*/-->
+                <input type="text" th:field="*{username}" class="form-control" placeholder="Логин" aria-label="Username"
+                       aria-describedby="username">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="password"><i class="fas fa-unlock"></i></span>
                 </div>
-                <input type="password" class="form-control" placeholder="Пароль" aria-label="Username" aria-describedby="password">
+                <!--/*@thymesVar id="password" type="by.grsu.boldak.models.AuthenticateForm"*/-->
+                <input type="password" th:field="*{password}" class="form-control" placeholder="Пароль"
+                       aria-label="Username" aria-describedby="password">
             </div>
             <div class="custom-control custom-checkbox center-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <!--/*@thymesVar id="savePass" type="by.grsu.boldak.models.AuthenticateForm"*/-->
+                <input type="checkbox" th:field="*{savePass}" class="custom-control-input" id="customCheck1">
                 <label class="custom-control-label" for="customCheck1">Запомнить</label>
             </div>
             <button type="submit" class="btn btn-primary btn-lg btn-block pad-auth-btn">Войти</button>
         </form>
+        <!--&lt;!&ndash;/*@thymesVar id="isPost" type="by.grsu.boldak.controllers.AuthController"*/&ndash;&gt;-->
+        <!--<div class="result-form">-->
+            <!--&lt;!&ndash;<div class="greeting-text">&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;/*@thymesVar id="auth" type="by.grsu.boldak.models.AuthenticateForm"*/&ndash;&gt;-->
+            <!--<p th:text="'Username: ' + ${auth.username}"></p>-->
+            <!--<p th:text="'Password: ' + ${auth.password}"></p>-->
+        <!--</div>-->
     </div>
 </section>
 <script type="text/javascript" src="webjars/jquery/3.0.0/jquery.min.js"></script>

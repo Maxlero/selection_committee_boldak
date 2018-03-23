@@ -327,7 +327,7 @@ body {
 
 .auth-form {
     width: 320px;
-    height: 300px;
+    height: auto;
     border-radius: 2px;
     background-color: #ffffff;
     margin: auto;
@@ -350,4 +350,13 @@ body {
 
 .electrons-anim {
     animation: electrons-animation 2.5s linear infinite;
+}
+
+.result-form {
+    margin-top: 80px;
+}
+
+.error-text {
+    font-weight: bold;
+    margin-bottom: 20px;
 }
