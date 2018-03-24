@@ -42,8 +42,10 @@ public class UserRegistrationController {
 	}
 
 	@PostMapping
-	public String registerUserAccount(@ModelAttribute("user") @Valid UserRegistrationDto userDto,
+	public String registerUserAccount(Model model, @ModelAttribute("user") @Valid UserRegistrationDto userDto,
 									  BindingResult result) {
+
+		model.addAttribute("facultys", facultyRepository.findAll());
 
 		User existing = userService.findByEmail(userDto.getEmail());
 		if (existing != null) {

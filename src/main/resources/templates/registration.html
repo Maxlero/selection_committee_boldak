@@ -102,10 +102,11 @@
                         </div>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" th:classappend="${#fields.hasErrors('terms')}? 'is-invalid':''"
-                               value="" id="terms" required="" type="checkbox" th:field="*{terms}">
-                        <label class="form-check-label" for="terms">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input"
+                               th:classappend="${#fields.hasErrors('terms')}? 'is-invalid':''" id="terms"
+                               th:field="*{terms}" required>
+                        <label class="custom-control-label" for="terms">
                             Я согласен с <a href="#">правилами университета</a>
                         </label>
                         <div class="invalid-feedback"
