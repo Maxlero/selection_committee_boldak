@@ -8,7 +8,7 @@
     <version>0.0.1</version>
     <packaging>jar</packaging>
 
-    <name>boldak</name>
+    <faculty>boldak</faculty>
     <description>Selection committee by Boldak D.A. CS-161</description>
 
     <parent>

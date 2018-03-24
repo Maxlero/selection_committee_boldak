@@ -8,8 +8,7 @@
 
     <!-- My styles -->
 
-    <link rel="stylesheet" th:href="@{/css/styles.css}"
-          href="../static/css/styles.css"/>
+    <link rel="stylesheet" href="/css/styles.css" th:href="@{/css/styles.css}"/>
 </head>
 <body>
 <header th:fragment="head">
@@ -47,7 +46,18 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
-            <a href="/login" class="btn btn-outline-info my-2 my-sm-0">Авторизоваться</a>
+            <!--/*@thymesVar id="authorized" type="by.grsu.boldak.controller.MainControllerAdvice"*/-->
+            <div th:unless="${authorized}">
+                <a href="/login" class="btn btn-info my-2 my-sm-0">Авторизоваться</a>
+            </div>
+            <div class="authenticated" th:if="${authorized}">
+                <div class="greeting">
+                <span th:text="${account.firstName}"></span>
+                <span th:text="${account.lastName}"></span>,
+                <span>здравствуйте!</span>
+                </div>
+                <a href="/logout" class="btn btn-danger my-2 my-sm-0">Выйти</a>
+            </div>
         </div>
     </nav>
 </header>

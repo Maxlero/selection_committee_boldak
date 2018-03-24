@@ -400,3 +400,13 @@ body {
 .error-message:first-letter {
     text-transform: capitalize;
 }
+
+.authenticated {
+    display: flex;
+    color: #fff;
+}
+
+.greeting {
+    font-size: 12pt;
+    margin: auto 10px auto auto;
+}
