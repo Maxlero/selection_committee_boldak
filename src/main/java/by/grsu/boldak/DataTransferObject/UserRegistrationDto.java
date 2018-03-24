@@ -4,6 +4,7 @@ import by.grsu.boldak.constraint.FieldMatch;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 @FieldMatch.List({
@@ -19,6 +20,9 @@ public class UserRegistrationDto {
 
 	@NotEmpty
 	private String password;
+
+	@Min(0)
+	private Integer faculty;
 
 	@NotEmpty
 	private String confirmPassword;
@@ -76,5 +80,13 @@ public class UserRegistrationDto {
 
 	public void setTerms(Boolean terms) {
 		this.terms = terms;
+	}
+
+	public Integer getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(Integer faculty) {
+		this.faculty = faculty;
 	}
 }

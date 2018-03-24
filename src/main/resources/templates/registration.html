@@ -59,14 +59,17 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="faculty">Фамилия</label>
-                        <select class="custom-select" id="faculty" required>
+                        <label for="faculty">Факультет</label>
+                        <select class="custom-select" id="faculty" th:field="*{faculty}"
+                                th:classappend="${#fields.hasErrors('faculty')}? 'is-invalid':''" required>
                             <option value="">Выберите факультет</option>
-                            <option th:each="faculty : ${faculty}" th:value="${faculty.faculty}"
-                                    th:text="${faculty.faculty}">
+                            <option th:each="facultys : ${facultys}" th:value="${facultys.id}"
+                                    th:text="${facultys.faculty}">
                             </option>
                         </select>
-                        <div class="invalid-feedback">Example invalid custom select feedback</div>
+                        <div class="invalid-feedback" th:each="error: ${#fields.errors('faculty')}"
+                             th:text="${error}">
+                        </div>
                     </div>
 
                     <div class="form-group">

@@ -15,6 +15,7 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+    private Integer faculty;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
@@ -28,18 +29,20 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password) {
+    public User(String firstName, String lastName, String email, String password, Integer faculty) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.faculty = faculty;
     }
 
-    public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+    public User(String firstName, String lastName, String email, String password, Integer faculty, Collection<Role> roles) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+        this.faculty = faculty;
         this.roles = roles;
     }
 
@@ -83,6 +86,14 @@ public class User {
         this.password = password;
     }
 
+    public Integer getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(Integer faculty) {
+        this.faculty = faculty;
+    }
+
     public Collection<Role> getRoles() {
         return roles;
     }
@@ -97,6 +108,7 @@ public class User {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+				"', faculty='" + faculty + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + "*********" + '\'' +
                 ", roles=" + roles +
