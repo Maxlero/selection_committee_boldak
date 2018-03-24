@@ -1,4 +1,4 @@
-package by.grsu.boldak.models;
+package by.grsu.boldak.model;
 
 public class AuthenticateForm {
 	private String username;
