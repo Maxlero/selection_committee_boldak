@@ -3,7 +3,7 @@ package by.grsu.boldak.service;
 import by.grsu.boldak.model.Role;
 import by.grsu.boldak.model.User;
 import by.grsu.boldak.repository.UserRepository;
-import by.grsu.boldak.web.dto.UserRegistrationDto;
+import by.grsu.boldak.DataTransferObject.UserRegistrationDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		User user = userRepository.findByEmail(email);
 		if (user == null) {
-			throw new UsernameNotFoundException("Invalid username or password.");
+			throw new UsernameNotFoundException("Неверное имя пользователя или пароль");
 		}
 		return new org.springframework.security.core.userdetails.User(user.getEmail(),
 				user.getPassword(),

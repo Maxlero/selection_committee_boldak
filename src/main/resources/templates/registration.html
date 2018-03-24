@@ -40,7 +40,8 @@
 
                     <div class="form-group">
                         <label for="firstName">Имя</label>
-                        <input type="text" class="form-control" th:classappend="${#fields.hasErrors('firstName')}? 'is-invalid':''"
+                        <input type="text" class="form-control"
+                               th:classappend="${#fields.hasErrors('firstName')}? 'is-invalid':''"
                                th:field="*{firstName}" id="firstName" placeholder="Имя" required>
                         <div class="invalid-feedback" th:each="error: ${#fields.errors('firstName')}"
                              th:text="${error}">
@@ -49,7 +50,8 @@
 
                     <div class="form-group">
                         <label for="lastName">Фамилия</label>
-                        <input type="text" class="form-control" th:classappend="${#fields.hasErrors('lastName')}? 'is-invalid':''"
+                        <input type="text" class="form-control"
+                               th:classappend="${#fields.hasErrors('lastName')}? 'is-invalid':''"
                                th:field="*{lastName}" id="lastName" placeholder="Фамилия" required>
                         <div class="invalid-feedback" th:each="error: ${#fields.errors('lastName')}"
                              th:text="${error}">
@@ -58,7 +60,8 @@
 
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="text" class="form-control" th:classappend="${#fields.hasErrors('email')}? 'is-invalid':''"
+                        <input type="text" class="form-control"
+                               th:classappend="${#fields.hasErrors('email')}? 'is-invalid':''"
                                th:field="*{email}" id="email" placeholder="Фамилия" required>
                         <div class="invalid-feedback" th:each="error: ${#fields.errors('email')}"
                              th:text="${error}">
@@ -67,7 +70,8 @@
 
                     <div class="form-group">
                         <label for="password">Пароль</label>
-                        <input type="password" class="form-control" th:classappend="${#fields.hasErrors('password')}? 'is-invalid':''"
+                        <input type="password" class="form-control"
+                               th:classappend="${#fields.hasErrors('password')}? 'is-invalid':''"
                                th:field="*{password}" id="password" required>
                         <div class="invalid-feedback" th:each="error: ${#fields.errors('password')}"
                              th:text="${error}">
@@ -76,7 +80,8 @@
 
                     <div class="form-group">
                         <label for="confirmPassword">Пароль</label>
-                        <input type="password" class="form-control" th:classappend="${#fields.hasErrors('confirmPassword')}? 'is-invalid':''"
+                        <input type="password" class="form-control"
+                               th:classappend="${#fields.hasErrors('confirmPassword')}? 'is-invalid':''"
                                th:field="*{confirmPassword}" id="confirmPassword" required>
                         <div class="invalid-feedback" th:each="error: ${#fields.errors('confirmPassword')}"
                              th:text="${error}">

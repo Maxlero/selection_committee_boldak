@@ -2,7 +2,7 @@ package by.grsu.boldak.controller;
 
 import by.grsu.boldak.model.User;
 import by.grsu.boldak.service.UserService;
-import by.grsu.boldak.web.dto.UserRegistrationDto;
+import by.grsu.boldak.DataTransferObject.UserRegistrationDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
