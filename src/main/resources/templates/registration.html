@@ -39,21 +39,21 @@
                        th:text="${error}">Что-то пошло не так</p>
 
                     <div class="form-group">
-                        <label for="firstName">Имя</label>
-                        <input type="text" class="form-control"
-                               th:classappend="${#fields.hasErrors('firstName')}? 'is-invalid':''"
-                               th:field="*{firstName}" id="firstName" placeholder="Имя" required>
-                        <div class="invalid-feedback" th:each="error: ${#fields.errors('firstName')}"
-                             th:text="${error}">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <label for="lastName">Фамилия</label>
                         <input type="text" class="form-control"
                                th:classappend="${#fields.hasErrors('lastName')}? 'is-invalid':''"
                                th:field="*{lastName}" id="lastName" placeholder="Фамилия" required>
                         <div class="invalid-feedback" th:each="error: ${#fields.errors('lastName')}"
+                             th:text="${error}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName">Имя</label>
+                        <input type="text" class="form-control"
+                               th:classappend="${#fields.hasErrors('firstName')}? 'is-invalid':''"
+                               th:field="*{firstName}" id="firstName" placeholder="Имя" required>
+                        <div class="invalid-feedback" th:each="error: ${#fields.errors('firstName')}"
                              th:text="${error}">
                         </div>
                     </div>
@@ -72,11 +72,30 @@
                         </div>
                     </div>
 
+                    <div id="subjects" class="d-none">
+                        <div class="form-group">
+                            <label for="mark1" id="subject0-title">Предмет 1</label>
+                            <input type="number" class="form-control" id="mark1" th:field="*{mark1}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mark2" id="subject1-title">Предмет 2</label>
+                            <input type="number" class="form-control" id="mark2" th:field="*{mark2}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mark3" id="subject2-title">Предмет 1</label>
+                            <input type="number" class="form-control" id="mark3" th:field="*{mark3}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="certificate" id="certificate-title">Балл аттестата</label>
+                            <input type="number" class="form-control" id="certificate" th:field="*{certificate}" required>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="text" class="form-control"
                                th:classappend="${#fields.hasErrors('email')}? 'is-invalid':''"
-                               th:field="*{email}" id="email" placeholder="Фамилия" required>
+                               th:field="*{email}" id="email" placeholder="E-mail" required>
                         <div class="invalid-feedback" th:each="error: ${#fields.errors('email')}"
                              th:text="${error}">
                         </div>
@@ -123,5 +142,43 @@
     </div>
 </section>
 <div th:replace="fragments/footer :: scripts"></div>
+<script>
+    function updateNames(e) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState === 4) {
+                var arr = this.responseText.split("\n");
+
+                console.log(arr);
+
+                if (arr.length > 0 && this.responseText.length > 0 && this.status === 200) {
+                    var counter = 0;
+                    for (var subject in arr) {
+                        $("#subject" + counter + "-title").text(arr[subject]);
+
+                        counter++;
+                    }
+
+                    $("#subjects").removeClass("d-none");
+                } else {
+                    $("#subjects").addClass("d-none");
+                }
+            }
+        };
+
+        console.log(e);
+
+        xhttp.open("GET", "/AJAX/subjects?id=" + e.selectedIndex, true);
+        xhttp.send();
+    }
+
+    const facultySelect = $("#faculty");
+
+    facultySelect.change(function (e) {
+        updateNames(this);
+    });
+
+    updateNames(facultySelect[0]);
+</script>
 </body>
 </html>

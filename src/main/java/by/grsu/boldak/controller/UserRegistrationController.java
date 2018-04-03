@@ -1,10 +1,9 @@
 package by.grsu.boldak.controller;
 
-import by.grsu.boldak.Starter;
+import by.grsu.boldak.DataTransferObject.UserRegistrationDto;
 import by.grsu.boldak.model.User;
 import by.grsu.boldak.repository.FacultyRepository;
 import by.grsu.boldak.service.UserService;
-import by.grsu.boldak.DataTransferObject.UserRegistrationDto;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -49,11 +48,11 @@ public class UserRegistrationController {
 
 		User existing = userService.findByEmail(userDto.getEmail());
 		if (existing != null) {
-			result.rejectValue("email", null, "Аккаунт с таким e-mail адресом уже зарегистрирован");
+			result.rejectValue("email", "", "Аккаунт с таким e-mail адресом уже зарегистрирован");
 		}
 
 		if(facultyRepository.findById(userDto.getFaculty()) == null) {
-			result.rejectValue("faculty", null, "Неверно заполнено поле");
+			result.rejectValue("faculty", "", "Неверно заполнено поле");
 		}
 
 		if (result.hasErrors()) {

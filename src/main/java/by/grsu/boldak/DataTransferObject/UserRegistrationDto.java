@@ -2,10 +2,7 @@ package by.grsu.boldak.DataTransferObject;
 
 import by.grsu.boldak.constraint.FieldMatch;
 
-import javax.validation.constraints.AssertTrue;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.*;
 
 @FieldMatch.List({
 		@FieldMatch(first = "password", second = "confirmPassword", message = "Пароли не совпадают"),
@@ -21,8 +18,23 @@ public class UserRegistrationDto {
 	@NotEmpty
 	private String password;
 
+	private int faculty;
+
 	@Min(0)
-	private Integer faculty;
+	@Max(100)
+	private int mark1;
+
+	@Min(0)
+	@Max(100)
+	private int mark2;
+
+	@Min(0)
+	@Max(100)
+	private int mark3;
+
+	@Min(0)
+	@Max(100)
+	private int certificate;
 
 	@NotEmpty
 	private String confirmPassword;
@@ -82,11 +94,43 @@ public class UserRegistrationDto {
 		this.terms = terms;
 	}
 
-	public Integer getFaculty() {
+	public int getFaculty() {
 		return faculty;
 	}
 
 	public void setFaculty(Integer faculty) {
 		this.faculty = faculty;
+	}
+
+	public int getMark1() {
+		return mark1;
+	}
+
+	public void setMark1(int mark1) {
+		this.mark1 = mark1;
+	}
+
+	public int getMark2() {
+		return mark2;
+	}
+
+	public void setMark2(int mark2) {
+		this.mark2 = mark2;
+	}
+
+	public int getMark3() {
+		return mark3;
+	}
+
+	public void setMark3(int mark3) {
+		this.mark3 = mark3;
+	}
+
+	public int getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(int certificate) {
+		this.certificate = certificate;
 	}
 }
