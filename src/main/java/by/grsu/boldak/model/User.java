@@ -1,7 +1,6 @@
 package by.grsu.boldak.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import java.util.Collection;
 
 @Entity

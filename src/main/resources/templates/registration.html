@@ -75,19 +75,36 @@
                     <div id="subjects" class="d-none">
                         <div class="form-group">
                             <label for="mark1" id="subject0-title">Предмет 1</label>
-                            <input type="number" class="form-control" id="mark1" th:field="*{mark1}" required>
+                            <input type="text" class="form-control" id="mark1" th:field="*{mark1}" pattern="[0-9]*"
+                                   th:classappend="${#fields.hasErrors('faculty')}? 'is-invalid':''" required>
+                            <div class="invalid-feedback" th:each="error: ${#fields.errors('mark1')}"
+                                 th:text="${error}">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="mark2" id="subject1-title">Предмет 2</label>
-                            <input type="number" class="form-control" id="mark2" th:field="*{mark2}" required>
+                            <input type="text" class="form-control" id="mark2" th:field="*{mark2}" pattern="[0-9]*"
+                                   th:classappend="${#fields.hasErrors('faculty')}? 'is-invalid':''" required>
+                            <div class="invalid-feedback" th:each="error: ${#fields.errors('mark2')}"
+                                 th:text="${error}">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="mark3" id="subject2-title">Предмет 1</label>
-                            <input type="number" class="form-control" id="mark3" th:field="*{mark3}" required>
+                            <input type="text" class="form-control" id="mark3" th:field="*{mark3}" pattern="[0-9]*"
+                                   th:classappend="${#fields.hasErrors('faculty')}? 'is-invalid':''" required>
+                            <div class="invalid-feedback" th:each="error: ${#fields.errors('mark3')}"
+                                 th:text="${error}">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label for="certificate" id="certificate-title">Балл аттестата</label>
-                            <input type="number" class="form-control" id="certificate" th:field="*{certificate}" required>
+                            <input type="text" class="form-control" id="certificate" th:field="*{certificate}"
+                                   pattern="[0-9]*"
+                                   th:classappend="${#fields.hasErrors('faculty')}? 'is-invalid':''" required>
+                            <div class="invalid-feedback" th:each="error: ${#fields.errors('certificate')}"
+                                 th:text="${error}">
+                            </div>
                         </div>
                     </div>
 
@@ -172,7 +189,7 @@
         xhttp.send();
     }
 
-    const facultySelect = $("#faculty");
+    var facultySelect = $("#faculty");
 
     facultySelect.change(function (e) {
         updateNames(this);
