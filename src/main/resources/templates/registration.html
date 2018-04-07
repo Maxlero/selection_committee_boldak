@@ -183,9 +183,8 @@
             }
         };
 
-        console.log(e);
-
-        xhttp.open("GET", "/AJAX/subjects?id=" + e.selectedIndex, true);
+        var selected = e[e.selectedIndex];
+        xhttp.open("GET", "/AJAX/subjects?id=" + selected.value, true);
         xhttp.send();
     }
 
