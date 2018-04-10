@@ -30,6 +30,11 @@ public class Faculty {
 	@Max(400)
 	private int requirement;
 
+	@Override
+	public String toString() {
+		return "Sobachka";
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -68,5 +73,13 @@ public class Faculty {
 
 	public void setSubject3(String subject3) {
 		this.subject3 = subject3;
+	}
+
+	public int getRequirement() {
+		return requirement;
+	}
+
+	public void setRequirement(int requirement) {
+		this.requirement = requirement;
 	}
 }

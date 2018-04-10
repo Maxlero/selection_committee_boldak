@@ -410,3 +410,11 @@ body {
     font-size: 12pt;
     margin: auto 10px auto auto;
 }
+
+.thead-dark {
+    background-color: #2f3241 !important;
+}
+
+.table .thead-dark th {
+    background-color: #2f3241 !important;
+}

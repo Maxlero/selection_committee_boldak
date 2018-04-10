@@ -1,7 +1,7 @@
 package by.grsu.boldak.service;
 
 import by.grsu.boldak.model.User;
-import by.grsu.boldak.DataTransferObject.UserRegistrationDto;
+import by.grsu.boldak.dto.UserRegistrationDto;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface UserService extends UserDetailsService {

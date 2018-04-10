@@ -1,6 +1,6 @@
 package by.grsu.boldak.controller;
 
-import by.grsu.boldak.DataTransferObject.UserRegistrationDto;
+import by.grsu.boldak.dto.UserRegistrationDto;
 import by.grsu.boldak.model.User;
 import by.grsu.boldak.repository.FacultyRepository;
 import by.grsu.boldak.service.UserService;

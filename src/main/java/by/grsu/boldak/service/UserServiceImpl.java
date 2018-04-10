@@ -3,7 +3,7 @@ package by.grsu.boldak.service;
 import by.grsu.boldak.model.Role;
 import by.grsu.boldak.model.User;
 import by.grsu.boldak.repository.UserRepository;
-import by.grsu.boldak.DataTransferObject.UserRegistrationDto;
+import by.grsu.boldak.dto.UserRegistrationDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

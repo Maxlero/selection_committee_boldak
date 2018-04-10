@@ -1,4 +1,4 @@
-package by.grsu.boldak.DataTransferObject;
+package by.grsu.boldak.dto;
 
 import by.grsu.boldak.constraint.FieldMatch;
 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Димасосский университет - Абитуриенты</title>
+
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-1/css/bootstrap.min.css"/>
+
+	<!-- FA 5 -->
+	<link rel="stylesheet" href="webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome-all.min.css"/>
+
+	<!-- My styles -->
+	<link rel="stylesheet" th:href="@{/css/styles.css}"
+		  href="../static/css/styles.css"/>
+</head>
+<body>
+<header th:replace="fragments/header :: head"></header>
+<div th:each="faculty : ${facultys}" class="text-center">
+	<div class="container mt-5">
+		<div class="col-md-12">
+			<h4>
+				<span th:text="${faculty.faculty}"></span>
+				<span> ( Необходимо: </span>
+				<span th:text="${faculty.requirement}"></span>
+				<span>)</span>
+			</h4>
+			<table class="table table-hover text-center">
+				<thead class="thead-dark">
+				<tr>
+					<th class="align-middle" scope="col">Фамилия Имя</th>
+					<th class="align-middle" scope="col" th:text="${faculty.subject1}"></th>
+					<th class="align-middle" scope="col" th:text="${faculty.subject2}"></th>
+					<th class="align-middle" scope="col" th:text="${faculty.subject3}"></th>
+					<th class="align-middle" scope="col">Аттестат</th>
+					<th class="align-middle" scope="col">Сумма</th>
+					<th class="align-middle" scope="col">Студент</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr th:each="entrant : ${users}" th:if="${entrant.faculty}==${faculty.id}">
+					<td class="align-middle">
+						<span th:text="${entrant.lastName}"></span>
+						<span th:text="${entrant.firstName}"></span>
+					</td>
+					<td class="align-middle" th:text="${entrant.mark1}"></td>
+					<td class="align-middle" th:text="${entrant.mark2}"></td>
+					<td class="align-middle" th:text="${entrant.mark3}"></td>
+					<td class="align-middle" th:text="${entrant.certificate}"></td>
+					<td class="align-middle" th:text="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}"></td>
+					<td class="align-middle">
+						<div th:if="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}>=${faculty.requirement}">
+							<i class="fas fa-check"></i>
+						</div>
+						<div th:if="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}<${faculty.requirement}">
+							<i class="fas fa-times"></i>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!--<div th:each="entrant : ${users}">-->
+<!--<div th:text="${entrant.firstName}"></div>-->
+<!--<div th:text="${entrant.faculty_}"></div>-->
+<!--</div>-->
+<div th:replace="fragments/footer :: scripts"></div>
+</body>
+</html>
