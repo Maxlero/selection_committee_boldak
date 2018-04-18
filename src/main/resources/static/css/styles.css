@@ -419,3 +419,27 @@ body {
 .table .thead-dark th {
     background-color: #2f3241 !important;
 }
+
+.face-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+
+	/* #4 AND INFINITY!!! (CSS3 only) */
+	box-shadow:
+			0 0 0 10px hsl(0, 0%, 80%),
+			0 0 0 15px hsl(0, 0%, 90%);
+}
+
+.face-circle img {
+    width: 300px;
+    height: 300px;
+
+	transform: rotateZ(0);
+	transition: transform .3s ease;
+}
+
+.face-circle img:hover {
+	transform: rotateZ(360deg);
+}
