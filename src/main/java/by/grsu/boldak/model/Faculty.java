@@ -32,7 +32,14 @@ public class Faculty {
 
 	@Override
 	public String toString() {
-		return "Sobachka";
+		return "Faculty{" +
+				"id=" + id +
+				", faculty='" + faculty + '\'' +
+				", subject1='" + subject1 + '\'' +
+				", subject2='" + subject2 + '\'' +
+				", subject3='" + subject3 + '\'' +
+				", requirement=" + requirement +
+				'}';
 	}
 
 	public Integer getId() {

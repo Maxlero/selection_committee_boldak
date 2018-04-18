@@ -28,27 +28,27 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item" th:classappend="${#httpServletRequest.getRequestURI()=='/'?'active':''}">
                     <a class="nav-link" href="/">
-                        Главная
+                        Main
                     </a>
                 </li>
                 <li class="nav-item" th:classappend="${#httpServletRequest.getRequestURI()=='/entrants'?'active':''}">
-                    <a class="nav-link" href="/entrants">Список абитуриентов</a>
+                    <a class="nav-link" href="/entrants">Entrants list</a>
                 </li>
                 <li class="nav-item" sec:authorize="hasRole('ROLE_ADMIN')" th:classappend="${#httpServletRequest.getRequestURI()=='/admin'?'active':''}">
-                    <a class="nav-link" href="/admin">Админская комнатка</a>
+                    <a class="nav-link" href="/admin">Admins room</a>
                 </li>
             </ul>
             <!--/*@thymesVar id="authorized" type="by.grsu.boldak.controller.MainControllerAdvice"*/-->
             <div th:unless="${authorized}">
-                <a href="/login" class="btn btn-info my-2 my-sm-0">Авторизоваться</a>
+                <a href="/login" class="btn btn-info my-2 my-sm-0">Sign in</a>
             </div>
             <div class="authenticated" th:if="${authorized}">
                 <div class="greeting">
                     <span th:text="${account.firstName}"></span>
                     <span th:text="${account.lastName}"></span>,
-                    <span>здравствуйте!</span>
+                    <span>welcome!</span>
                 </div>
-                <a href="/logout" class="btn btn-danger my-2 my-sm-0">Выйти</a>
+                <a href="/logout" class="btn btn-danger my-2 my-sm-0">Logout</a>
             </div>
         </div>
     </nav>

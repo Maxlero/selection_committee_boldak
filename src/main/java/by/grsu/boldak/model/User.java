@@ -1,7 +1,6 @@
 package by.grsu.boldak.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import java.util.Collection;
 
 @Entity
@@ -164,15 +163,20 @@ public class User {
 	}
 
 	@Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-				"', faculty='" + faculty + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + "*********" + '\'' +
-                ", roles=" + roles +
-                '}';
-    }
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", firstName='" + firstName + '\'' +
+				", lastName='" + lastName + '\'' +
+				", email='" + email + '\'' +
+				", password='*********'" +
+				", faculty=" + faculty +
+				", mark1=" + mark1 +
+				", mark2=" + mark2 +
+				", mark3=" + mark3 +
+				", certificate=" + certificate +
+				", confirmed=" + confirmed +
+				", roles=" + roles +
+				'}';
+	}
 }

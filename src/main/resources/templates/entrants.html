@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
-	<title>Димасосский университет - Абитуриенты</title>
+	<title>Dimasos University - Entrants</title>
 
 	<!-- Bootstrap 4 -->
 	<link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-1/css/bootstrap.min.css"/>
@@ -21,20 +21,20 @@
 		<div class="col-md-12">
 			<h4>
 				<span th:text="${faculty.faculty}"></span>
-				<span> ( Необходимо: </span>
+				<span> ( Required: </span>
 				<span th:text="${faculty.requirement}"></span>
 				<span>)</span>
 			</h4>
 			<table class="table table-hover text-center">
 				<thead class="thead-dark">
 				<tr>
-					<th class="align-middle" scope="col">Фамилия Имя</th>
+					<th class="align-middle" scope="col">Name</th>
 					<th class="align-middle" scope="col" th:text="${faculty.subject1}"></th>
 					<th class="align-middle" scope="col" th:text="${faculty.subject2}"></th>
 					<th class="align-middle" scope="col" th:text="${faculty.subject3}"></th>
-					<th class="align-middle" scope="col">Аттестат</th>
-					<th class="align-middle" scope="col">Сумма</th>
-					<th class="align-middle" scope="col">Студент</th>
+					<th class="align-middle" scope="col">Certificate</th>
+					<th class="align-middle" scope="col">Total</th>
+					<th class="align-middle" scope="col">Student?</th>
 				</tr>
 				</thead>
 				<tbody>
@@ -66,11 +66,6 @@
 		</div>
 	</div>
 </div>
-
-<!--<div th:each="entrant : ${users}">-->
-<!--<div th:text="${entrant.firstName}"></div>-->
-<!--<div th:text="${entrant.faculty_}"></div>-->
-<!--</div>-->
 <div th:replace="fragments/footer :: scripts"></div>
 </body>
 </html>

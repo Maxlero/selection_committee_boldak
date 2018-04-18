@@ -6,6 +6,15 @@ public class AuthenticateForm {
 
 	private boolean savePass;
 
+	@Override
+	public String toString() {
+		return "AuthenticateForm{" +
+				"username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", savePass=" + savePass +
+				'}';
+	}
+
 	public String getUsername() {
 		return username;
 	}

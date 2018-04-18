@@ -48,11 +48,11 @@ public class UserRegistrationController {
 
 		User existing = userService.findByEmail(userDto.getEmail());
 		if (existing != null) {
-			result.rejectValue("email", "", "Аккаунт с таким e-mail адресом уже зарегистрирован");
+			result.rejectValue("email", "", "Account with this e-mail already registered");
 		}
 
 		if(facultyRepository.findById(userDto.getFaculty()) == null) {
-			result.rejectValue("faculty", "", "Неверно заполнено поле");
+			result.rejectValue("faculty", "", "Incorrectly filled field");
 		}
 
 		if (result.hasErrors()) {
