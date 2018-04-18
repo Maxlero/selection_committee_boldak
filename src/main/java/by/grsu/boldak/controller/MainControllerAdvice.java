@@ -27,5 +27,7 @@ public class MainControllerAdvice {
 		} else {
 			model.addAttribute("authorized", false);
 		}
+
+		model.addAttribute("title", "Dimasos University");
 	}
 }

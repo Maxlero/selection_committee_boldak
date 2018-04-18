@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
-<head>
+<head th:fragment="head_info">
     <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="shortcut icon" href="/img/favicon.ico" th:href="@{/img/favicon.ico}">
+	<title th:text="${title}"></title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/img/favicon.ico" th:href="@{/img/favicon.ico}" type="image/x-icon">
 
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-1/css/bootstrap.min.css"/>
 
-    <!-- My styles -->
+    <!-- FA 5 -->
+    <link rel="stylesheet" href="webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome-all.min.css"/>
 
-    <link rel="stylesheet" href="/css/styles.css" th:href="@{/css/styles.css}"/>
+    <!-- My styles -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}"
+          href="../static/css/styles.css"/>
 </head>
 <body>
 <header th:fragment="head">
@@ -44,8 +52,8 @@
             </div>
             <div class="authenticated" th:if="${authorized}">
                 <div class="greeting">
-                    <span th:text="${account.firstName}"></span>
-                    <span th:text="${account.lastName}"></span>,
+                    <span th:text="${account.lastName}"></span>
+                    <span th:text="${account.firstName}"></span>,
                     <span>welcome!</span>
                 </div>
                 <a href="/logout" class="btn btn-danger my-2 my-sm-0">Logout</a>

@@ -29,6 +29,8 @@ public class EntrantsController {
 
     @GetMapping
     public String Entrants(Model model) {
+        model.addAttribute("title", "Dimasos University - Entrants");
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
 

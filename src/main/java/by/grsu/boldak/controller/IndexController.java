@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class IndexController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String start(Model model) {
+		model.addAttribute("title", "Dimasos University - Main page");
+
 		return "index";
 	}
 }

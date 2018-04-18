@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <title>Dimasos University - Sign out</title>
-
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.0.0-1/css/bootstrap.min.css"/>
-
-    <!-- FA 5 -->
-    <link rel="stylesheet" href="webjars/font-awesome/5.0.6/web-fonts-with-css/css/fontawesome-all.min.css"/>
-
-    <!-- My styles -->
-    <link rel="stylesheet" th:href="@{/css/styles.css}"
-          href="../static/css/styles.css"/>
-</head>
+<head th:replace="fragments/header :: head_info"></head>
 <body>
 <header th:replace="fragments/header :: head"></header>
 <section id="register">

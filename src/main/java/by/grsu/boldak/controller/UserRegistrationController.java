@@ -35,6 +35,7 @@ public class UserRegistrationController {
 
 	@GetMapping
 	public String showRegistrationForm(Model model) {
+		model.addAttribute("title", "Dimasos University - Sign out");
 		model.addAttribute("facultys", facultyRepository.findAll());
 
 		return "registration";
@@ -43,7 +44,6 @@ public class UserRegistrationController {
 	@PostMapping
 	public String registerUserAccount(Model model, @ModelAttribute("user") @Valid UserRegistrationDto userDto,
 									  BindingResult result) {
-
 		model.addAttribute("facultys", facultyRepository.findAll());
 
 		User existing = userService.findByEmail(userDto.getEmail());
