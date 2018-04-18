@@ -41,6 +41,7 @@ public class UserServiceImpl implements UserService {
 		user.setMark2(registration.getMark2());
 		user.setMark3(registration.getMark3());
 		user.setCertificate(registration.getCertificate());
+		user.setConfirmed(0);
 		return userRepository.save(user);
 	}
 

@@ -47,13 +47,17 @@
 					<td class="align-middle" th:text="${entrant.mark2}"></td>
 					<td class="align-middle" th:text="${entrant.mark3}"></td>
 					<td class="align-middle" th:text="${entrant.certificate}"></td>
-					<td class="align-middle" th:text="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}"></td>
+					<td class="align-middle"
+						th:text="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}"></td>
 					<td class="align-middle">
-						<div th:if="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}>=${faculty.requirement}">
+						<div th:if="(${entrant.confirmed}==1)and(${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}>=${faculty.requirement})">
 							<i class="fas fa-check"></i>
 						</div>
-						<div th:if="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}<${faculty.requirement}">
+						<div th:if="(${entrant.confirmed}==-1)or((${entrant.confirmed}==1)and(${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}<${faculty.requirement}))">
 							<i class="fas fa-times"></i>
+						</div>
+						<div th:if="${entrant.confirmed}==0">
+							<i class="fas fa-question"></i>
 						</div>
 					</td>
 				</tr>

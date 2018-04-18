@@ -29,7 +29,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 						"/js/**",
 						"/css/**",
 						"/img/**",
-						"/webjars/**").permitAll()
+						"/webjars/**")
+				.permitAll()
+				.antMatchers(
+						"/admin/**"
+				).hasAuthority("ROLE_ADMIN")
 				.anyRequest().authenticated()
 				.and()
 				.formLogin()

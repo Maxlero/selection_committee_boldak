@@ -1,6 +1,7 @@
 package by.grsu.boldak.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import java.util.Collection;
 
 @Entity
@@ -24,6 +25,8 @@ public class User {
 
 	private int certificate;
 
+	private int confirmed;
+
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "users_roles",
@@ -36,32 +39,34 @@ public class User {
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password, int faculty, int mark1, int mark2, int mark3, int certificate) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.faculty = faculty;
-        this.mark1 = mark1;
-        this.mark2 = mark2;
-        this.mark3 = mark3;
-        this.certificate = certificate;
-    }
-
-    public User(String firstName, String lastName, String email, String password, int faculty,  int mark1, int mark2, int mark3, int certificate, Collection<Role> roles) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.password = password;
-        this.faculty = faculty;
-        this.roles = roles;
+	public User(String firstName, String lastName, String email, String password, int faculty, int mark1, int mark2, int mark3, int certificate, int confirmed) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.faculty = faculty;
 		this.mark1 = mark1;
 		this.mark2 = mark2;
 		this.mark3 = mark3;
 		this.certificate = certificate;
-    }
+		this.confirmed = confirmed;
+	}
 
-    public Integer getId() {
+	public User(String firstName, String lastName, String email, String password, int faculty, int mark1, int mark2, int mark3, int certificate, int confirmed, Collection<Role> roles) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.password = password;
+		this.faculty = faculty;
+		this.mark1 = mark1;
+		this.mark2 = mark2;
+		this.mark3 = mark3;
+		this.certificate = certificate;
+		this.confirmed = confirmed;
+		this.roles = roles;
+	}
+
+	public Integer getId() {
         return id;
     }
 
@@ -150,7 +155,15 @@ public class User {
 		this.certificate = certificate;
 	}
 
-    @Override
+	public int getConfirmed() {
+		return confirmed;
+	}
+
+	public void setConfirmed(int confirmed) {
+		this.confirmed = confirmed;
+	}
+
+	@Override
     public String toString() {
         return "User{" +
                 "id=" + id +
