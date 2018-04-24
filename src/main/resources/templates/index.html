@@ -127,9 +127,6 @@
 		var eyes = $('#max-eyes');
 		var offset = eyes.offset();
 
-		var width = $(window).width();
-		var height = $(window).height();
-
 		$(document).mousemove(function (event) {
 			currentMousePos.x = event.pageX;
 			currentMousePos.y = event.pageY;
@@ -138,8 +135,7 @@
 		});
 
 		$(window).resize(function () {
-			width = $(window).width();
-			height = $(window).height();
+			offset = eyes.offset();
 		});
 
 		function moveEyes() {
