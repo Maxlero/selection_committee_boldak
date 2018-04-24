@@ -80,14 +80,14 @@
 <section>
 	<div class="container pt-5">
 		<div class="row text-center">
-			<div class="col-md-4">
+			<div class="col-md-4 text-center">
 				<div class="face-circle">
 					<img class="face-rotate" th:src="@{/img/main/Alex2.0.jpg}" alt="">
 				</div>
 			</div>
 			<div class="col-md-8 text-left">
-				<h3 class="text-center">Our advantages:</h3>
-				<ul>
+				<h2 class="text-center">Our advantages:</h2>
+				<ul class="animated-ul">
 					<li>Our students always looks great on photos</li>
 					<li>We have Alexey</li>
 					<li>We have Maxim</li>
@@ -101,8 +101,8 @@
 		</div>
 		<div class="row text-center pt-5">
 			<div class="col-md-8 text-center">
-				<h3>Our disadvantages:</h3>
-				<ul class="text-left">
+				<h2>Our disadvantages:</h2>
+				<ul class="text-left animated-ul">
 					<li>Free education</li>
 					<li>Сonvenient schedule</li>
 					<li>Saturday - day off</li>
@@ -110,7 +110,7 @@
 					<li>Phiical education are optional</li>
 				</ul>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 text-center">
 				<div class="face-circle">
 					<img class="face-layer" th:src="@{/img/main/Max1.png}" alt="">
 					<img id="max-eyes" class="eyes-layer" th:src="@{/img/main/Max2.png}" alt="">
@@ -119,52 +119,9 @@
 		</div>
 	</div>
 </section>
-<div style="padding-top: 400px;"></div>
+<div class="footer-spacer"></div>
+<footer th:replace="fragments/footer :: footer"></footer>
 <div th:replace="fragments/footer :: scripts"></div>
-<script>
-	jQuery(function ($) {
-		var currentMousePos = {x: -1, y: -1};
-		var eyes = $('#max-eyes');
-		var offset = eyes.offset();
-
-		$(document).mousemove(function (event) {
-			currentMousePos.x = event.pageX;
-			currentMousePos.y = event.pageY;
-
-			moveEyes();
-		});
-
-		$(window).resize(function () {
-			offset = eyes.offset();
-		});
-
-		function moveEyes() {
-			var posX = (currentMousePos.x - offset.left - eyes.width() / 2) / 400;
-			var posY = (currentMousePos.y - offset.top - eyes.height() / 2) / 400;
-
-			if (posX > 1.0)
-				posX = 1.0;
-
-			if (posX < -1.0)
-				posX = -1.0;
-
-			if (posY > 1.0)
-				posY = 1.0;
-
-			if (posY < -1.0)
-				posY = -1.0;
-
-			eyes.css({
-				'-webkit-transform' : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
-				'-moz-transform'    : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
-				'-ms-transform'     : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
-				'-o-transform'      : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
-				'transform'         : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)'
-			});
-			// console.log(6 * posX);
-			// console.log(7 * posY);
-		}
-	});
-</script>
+<script type="text/javascript" src="/js/sexyEyes.js" th:src="@{/js/sexyEyes.js}"></script>
 </body>
 </html>

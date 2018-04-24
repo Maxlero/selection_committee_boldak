@@ -1,149 +1,149 @@
 @keyframes face-rotation-animation {
-    0% {
-        -webkit-transform: translate(2px, 1px) rotate(0deg);
-        -moz-transform: translate(2px, 1px) rotate(0deg);
-        -ms-transform: translate(2px, 1px) rotate(0deg);
-        -o-transform: translate(2px, 1px) rotate(0deg);
-        transform: translate(2px, 1px) rotate(0deg);
-    }
-    10% {
-        -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-        -moz-transform: translate(-1px, -2px) rotate(-1deg);
-        -ms-transform: translate(-1px, -2px) rotate(-1deg);
-        -o-transform: translate(-1px, -2px) rotate(-1deg);
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-    20% {
-        -webkit-transform: translate(-3px, 0px) rotate(1deg);
-        -moz-transform: translate(-3px, 0px) rotate(1deg);
-        -ms-transform: translate(-3px, 0px) rotate(1deg);
-        -o-transform: translate(-3px, 0px) rotate(1deg);
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-    30% {
-        -webkit-transform: translate(0px, 2px) rotate(0deg);
-        -moz-transform: translate(0px, 2px) rotate(0deg);
-        -ms-transform: translate(0px, 2px) rotate(0deg);
-        -o-transform: translate(0px, 2px) rotate(0deg);
-        transform: translate(0px, 2px) rotate(0deg);
-    }
-    40% {
-        -webkit-transform: translate(1px, -1px) rotate(1deg);
-        -moz-transform: translate(1px, -1px) rotate(1deg);
-        -ms-transform: translate(1px, -1px) rotate(1deg);
-        -o-transform: translate(1px, -1px) rotate(1deg);
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-    50% {
-        -webkit-transform: translate(-1px, 2px) rotate(-1deg);
-        -moz-transform: translate(-1px, 2px) rotate(-1deg);
-        -ms-transform: translate(-1px, 2px) rotate(-1deg);
-        -o-transform: translate(-1px, 2px) rotate(-1deg);
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-    60% {
-        -webkit-transform: translate(-3px, 1px) rotate(0deg);
-        -moz-transform: translate(-3px, 1px) rotate(0deg);
-        -ms-transform: translate(-3px, 1px) rotate(0deg);
-        -o-transform: translate(-3px, 1px) rotate(0deg);
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-    70% {
-        -webkit-transform: translate(2px, 1px) rotate(-1deg);
-        -moz-transform: translate(2px, 1px) rotate(-1deg);
-        -ms-transform: translate(2px, 1px) rotate(-1deg);
-        -o-transform: translate(2px, 1px) rotate(-1deg);
-        transform: translate(2px, 1px) rotate(-1deg);
-    }
-    80% {
-        -webkit-transform: translate(-1px, -1px) rotate(1deg);
-        -moz-transform: translate(-1px, -1px) rotate(1deg);
-        -ms-transform: translate(-1px, -1px) rotate(1deg);
-        -o-transform: translate(-1px, -1px) rotate(1deg);
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-    90% {
-        -webkit-transform: translate(2px, 2px) rotate(0deg);
-        -moz-transform: translate(2px, 2px) rotate(0deg);
-        -ms-transform: translate(2px, 2px) rotate(0deg);
-        -o-transform: translate(2px, 2px) rotate(0deg);
-        transform: translate(2px, 2px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translate(1px, -2px) rotate(-1deg);
-        -moz-transform: translate(1px, -2px) rotate(-1deg);
-        -ms-transform: translate(1px, -2px) rotate(-1deg);
-        -o-transform: translate(1px, -2px) rotate(-1deg);
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
+	0% {
+		-webkit-transform: translate(2px, 1px) rotate(0deg);
+		-moz-transform: translate(2px, 1px) rotate(0deg);
+		-ms-transform: translate(2px, 1px) rotate(0deg);
+		-o-transform: translate(2px, 1px) rotate(0deg);
+		transform: translate(2px, 1px) rotate(0deg);
+	}
+	10% {
+		-webkit-transform: translate(-1px, -2px) rotate(-1deg);
+		-moz-transform: translate(-1px, -2px) rotate(-1deg);
+		-ms-transform: translate(-1px, -2px) rotate(-1deg);
+		-o-transform: translate(-1px, -2px) rotate(-1deg);
+		transform: translate(-1px, -2px) rotate(-1deg);
+	}
+	20% {
+		-webkit-transform: translate(-3px, 0px) rotate(1deg);
+		-moz-transform: translate(-3px, 0px) rotate(1deg);
+		-ms-transform: translate(-3px, 0px) rotate(1deg);
+		-o-transform: translate(-3px, 0px) rotate(1deg);
+		transform: translate(-3px, 0px) rotate(1deg);
+	}
+	30% {
+		-webkit-transform: translate(0px, 2px) rotate(0deg);
+		-moz-transform: translate(0px, 2px) rotate(0deg);
+		-ms-transform: translate(0px, 2px) rotate(0deg);
+		-o-transform: translate(0px, 2px) rotate(0deg);
+		transform: translate(0px, 2px) rotate(0deg);
+	}
+	40% {
+		-webkit-transform: translate(1px, -1px) rotate(1deg);
+		-moz-transform: translate(1px, -1px) rotate(1deg);
+		-ms-transform: translate(1px, -1px) rotate(1deg);
+		-o-transform: translate(1px, -1px) rotate(1deg);
+		transform: translate(1px, -1px) rotate(1deg);
+	}
+	50% {
+		-webkit-transform: translate(-1px, 2px) rotate(-1deg);
+		-moz-transform: translate(-1px, 2px) rotate(-1deg);
+		-ms-transform: translate(-1px, 2px) rotate(-1deg);
+		-o-transform: translate(-1px, 2px) rotate(-1deg);
+		transform: translate(-1px, 2px) rotate(-1deg);
+	}
+	60% {
+		-webkit-transform: translate(-3px, 1px) rotate(0deg);
+		-moz-transform: translate(-3px, 1px) rotate(0deg);
+		-ms-transform: translate(-3px, 1px) rotate(0deg);
+		-o-transform: translate(-3px, 1px) rotate(0deg);
+		transform: translate(-3px, 1px) rotate(0deg);
+	}
+	70% {
+		-webkit-transform: translate(2px, 1px) rotate(-1deg);
+		-moz-transform: translate(2px, 1px) rotate(-1deg);
+		-ms-transform: translate(2px, 1px) rotate(-1deg);
+		-o-transform: translate(2px, 1px) rotate(-1deg);
+		transform: translate(2px, 1px) rotate(-1deg);
+	}
+	80% {
+		-webkit-transform: translate(-1px, -1px) rotate(1deg);
+		-moz-transform: translate(-1px, -1px) rotate(1deg);
+		-ms-transform: translate(-1px, -1px) rotate(1deg);
+		-o-transform: translate(-1px, -1px) rotate(1deg);
+		transform: translate(-1px, -1px) rotate(1deg);
+	}
+	90% {
+		-webkit-transform: translate(2px, 2px) rotate(0deg);
+		-moz-transform: translate(2px, 2px) rotate(0deg);
+		-ms-transform: translate(2px, 2px) rotate(0deg);
+		-o-transform: translate(2px, 2px) rotate(0deg);
+		transform: translate(2px, 2px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translate(1px, -2px) rotate(-1deg);
+		-moz-transform: translate(1px, -2px) rotate(-1deg);
+		-ms-transform: translate(1px, -2px) rotate(-1deg);
+		-o-transform: translate(1px, -2px) rotate(-1deg);
+		transform: translate(1px, -2px) rotate(-1deg);
+	}
 }
 
 @keyframes electrons-animation {
-    0% {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
 }
 
 html {
-    width: 100%;
-    height: 100%;
-    min-height: 690px;
+	width: 100%;
+	height: 100%;
+	min-height: 690px;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    min-height: 690px;
-    padding-top: 71px;
+	width: 100%;
+	height: 100%;
+	min-height: 690px;
+	padding-top: 71px;
 }
 
 .bg-dark {
-    background-color: #2f3241 !important;
-    border-bottom: 1px solid #1a1b23 !important;
-    padding-top: 15px;
-    padding-bottom: 15px;
+	background-color: #2f3241 !important;
+	border-bottom: 1px solid #1a1b23 !important;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 #faces {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 70%;
-    min-height: 690px;
-    background-color: #2b2e3b;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 70%;
+	min-height: 690px;
+	background-color: #2b2e3b;
 }
 
 .face {
-    width: 60px;
-    margin: auto;
-    animation: face-rotation-animation 1s ease infinite;
+	width: 60px;
+	margin: auto;
+	animation: face-rotation-animation 1s ease infinite;
 }
 
 .logo-univ {
-    margin: auto;
+	margin: auto;
 }
 
 .logo-univ img {
-    width: 300px;
-    height: 300px;
+	width: 300px;
+	height: 300px;
 }
 
 .left-faces {
-    width: 100%;
-    height: 350px;
-    margin: auto;
-    display: flex;
+	width: 100%;
+	height: 350px;
+	margin: auto;
+	display: flex;
 }
 
 .faces-grid {
@@ -152,290 +152,291 @@ body {
 
 .faces-grid .row,
 .faces-grid .row {
-    width: 100%;
-    height: 0;
-    margin: auto;
+	width: 100%;
+	height: 0;
+	margin: auto;
 }
 
 .faces-grid .row .col-sm-6,
 .faces-grid .row .col-sm-4 {
-    display: flex;
+	display: flex;
 }
 
 .faces-grid {
-    display: inline-grid;;
-    width: 100%;
-    height: 100%;
+	display: inline-grid;;
+	width: 100%;
+	height: 100%;
 }
 
 .right-faces {
-    display: flex;
-    width: 100%;
-    height: 350px;
-    margin: auto;
+	display: flex;
+	width: 100%;
+	height: 350px;
+	margin: auto;
 }
 
 @media screen and (max-width: 1000px) {
-    .right-faces {
-        display: none;
-    }
+	.right-faces {
+		display: none;
+	}
 
-    .left-faces {
-        display: none;
-    }
+	.left-faces {
+		display: none;
+	}
 }
 
 .face-1-l {
-    width: 30px;
-    margin-right: 20px;
-    opacity: 0.6;
-    animation-delay: -0.2s;
+	width: 30px;
+	margin-right: 20px;
+	opacity: 0.6;
+	animation-delay: -0.2s;
 }
 
 .face-2-l {
-    width: 70px;
-    margin-top: 0;
-    opacity: 0.8;
-    animation-delay: -0.1s;
+	width: 70px;
+	margin-top: 0;
+	opacity: 0.8;
+	animation-delay: -0.1s;
 }
 
 .face-3-l {
-    width: 25px;
-    margin-top: 0;
-    opacity: 0.5;
-    animation-delay: -0.3s;
+	width: 25px;
+	margin-top: 0;
+	opacity: 0.5;
+	animation-delay: -0.3s;
 }
 
 .face-4-l {
-    opacity: 0.6;
-    animation-delay: -0.5s;
+	opacity: 0.6;
+	animation-delay: -0.5s;
 }
 
 .face-5-l {
-    width: 75px;
-    opacity: 0.85;
-    animation-delay: -0.4s;
+	width: 75px;
+	opacity: 0.85;
+	animation-delay: -0.4s;
 }
 
 .face-6-l {
-    width: 35px;
-    margin-top: 0;
-    opacity: 0.6;
-    animation-delay: -0.9s;
+	width: 35px;
+	margin-top: 0;
+	opacity: 0.6;
+	animation-delay: -0.9s;
 }
 
 .face-7-l {
-    width: 65px;
-    opacity: 0.85;
-    margin-left: 50px;
-    margin-bottom: -20px;
-    animation-delay: -0.6s;
+	width: 65px;
+	opacity: 0.85;
+	margin-left: 50px;
+	margin-bottom: -20px;
+	animation-delay: -0.6s;
 }
 
 .face-1-r {
-    margin-left: 20px;
-    opacity: 0.6;
-    animation-delay: -0.25s;
+	margin-left: 20px;
+	opacity: 0.6;
+	animation-delay: -0.25s;
 }
 
 .face-2-r {
-    width: 70px;
-    margin-top: 0;
-    opacity: 0.8;
-    animation-delay: -0.15s;
+	width: 70px;
+	margin-top: 0;
+	opacity: 0.8;
+	animation-delay: -0.15s;
 }
 
 .face-3-r {
-    width: 25px;
-    margin-top: 0;
-    opacity: 0.5;
-    animation-delay: -0.35s;
+	width: 25px;
+	margin-top: 0;
+	opacity: 0.5;
+	animation-delay: -0.35s;
 }
 
 .face-4-r {
-    opacity: 0.6;
-    animation-delay: -0.55s;
+	opacity: 0.6;
+	animation-delay: -0.55s;
 }
 
 .face-5-r {
-    width: 75px;
-    opacity: 0.85;
-    animation-delay: -0.45s;
+	width: 75px;
+	opacity: 0.85;
+	animation-delay: -0.45s;
 }
 
 .face-6-r {
-    width: 35px;
-    margin-top: 0;
-    opacity: 0.6;
-    animation-delay: -0.95s;
+	width: 35px;
+	margin-top: 0;
+	opacity: 0.6;
+	animation-delay: -0.95s;
 }
 
 .face-7-r {
-    width: 65px;
-    opacity: 0.85;
-    margin-right: 50px;
-    margin-bottom: -20px;
-    animation-delay: -0.65s;
+	width: 65px;
+	opacity: 0.85;
+	margin-right: 50px;
+	margin-bottom: -20px;
+	animation-delay: -0.65s;
 }
 
 .faces-container-first-row {
-    display: flex;
-    width: 100%;
-    height: 100%;
+	display: flex;
+	width: 100%;
+	height: 100%;
 }
 
 .faces-container-second-row {
-    display: flex;
-    width: 100%;
-    height: auto;
-    line-height: 80px;
+	display: flex;
+	width: 100%;
+	height: auto;
+	line-height: 80px;
 }
 
 .faces-container-second-row .univ-text {
-    margin: auto;
-    font-size: 2.4rem;
-    color: #9feaf9;
+	margin: auto;
+	font-size: 2.4rem;
+	color: #9feaf9;
 }
 
 #auth,
 #register {
-    width: 100%;
-    min-height: 100%;
-    height: auto;
-    display: flex;
-    background-color: #2b2e3b;
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	display: flex;
+	background-color: #2b2e3b;
 }
 
 .auth-logo {
-    position: absolute;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #2b2e3b;
-    z-index: 100;
-    border: 2px #ffffff solid;
-    left: 50%;
-    width: 154px;
-    height: 154px;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+	position: absolute;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: #2b2e3b;
+	z-index: 100;
+	border: 2px #ffffff solid;
+	left: 50%;
+	width: 154px;
+	height: 154px;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }
 
 .auth-logo img,
 .register-form img {
-    padding: 15px;
-    width: 150px;
-    height: 150px;
+	padding: 15px;
+	width: 150px;
+	height: 150px;
 }
 
 .auth-form,
 .register-form {
-    width: 320px;
-    height: auto;
-    border-radius: 2px;
-    background-color: #ffffff;
-    margin: auto;
+	width: 320px;
+	height: auto;
+	border-radius: 2px;
+	background-color: #ffffff;
+	margin: auto;
 }
 
 @media screen and (min-width: 420px) {
-    .auth-form {
-        width: 320px;
-    }
+	.auth-form {
+		width: 320px;
+	}
 
-    .register-form {
-        width: 420px;
-    }
+	.register-form {
+		width: 420px;
+	}
 }
 
 @media screen and (max-width: 420px) {
-    .auth-form,
-    .register-form {
-        width: 100%;
-    }
+	.auth-form,
+	.register-form {
+		width: 100%;
+	}
 }
 
 .auth-form form,
 .register-form form {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .center-checkbox {
-    margin: auto;
+	margin: auto;
 }
 
 .pad-auth-btn {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .electrons-anim {
-    animation: electrons-animation 2.5s linear infinite;
+	animation: electrons-animation 2.5s linear infinite;
 }
 
 .result-form {
-    margin-top: 80px;
+	margin-top: 80px;
 }
 
 .error-text {
-    font-weight: bold;
-    margin-bottom: 20px;
+	font-weight: bold;
+	margin-bottom: 20px;
 }
 
 .auth-form-container,
 .register-form-container {
-    margin: auto;
-    padding-top: 100px;
-    padding-bottom: 20px;
+	margin: auto;
+	padding-top: 100px;
+	padding-bottom: 20px;
 }
 
 .form-content {
-    padding: 90px 8px 8px;
+	padding: 90px 8px 8px;
 }
 
 .error-message {
-    color: #a94442;
+	color: #a94442;
 }
 
 .error-message:first-letter {
-    text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 .authenticated {
-    display: flex;
-    color: #fff;
+	display: flex;
+	color: #fff;
 }
 
 .greeting {
-    font-size: 12pt;
-    margin: auto 10px auto auto;
+	font-size: 12pt;
+	margin: auto 10px auto auto;
 }
 
 .thead-dark {
-    background-color: #2f3241 !important;
+	background-color: #2f3241 !important;
 }
 
 .table .thead-dark th {
-    background-color: #2f3241 !important;
+	background-color: #2f3241 !important;
 }
 
 .face-circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
 
 	/* #4 AND INFINITY!!! (CSS3 only) */
-	box-shadow:
-			0 0 0 10px hsl(0, 0%, 80%),
-			0 0 0 15px hsl(0, 0%, 90%);
+	box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
+	0 0 0 15px hsl(0, 0%, 90%);
+
+	margin: 20px auto 20px;
 }
 
 .face-circle .face-rotate {
-    width: 300px;
-    height: 300px;
+	width: 300px;
+	height: 300px;
 
 	transform: rotateZ(0);
 	transition: transform .3s ease;
@@ -449,13 +450,124 @@ body {
 	width: 300px;
 	height: 300px;
 	left: 0;
-    position: absolute;
+	position: absolute;
 }
 
 .eyes-layer {
 	width: 300px;
 	height: 300px;
 	left: 0;
-    position: absolute;
+	position: absolute;
 	z-index: -1;
+}
+
+.animated-ul li {
+	font-size: 1.2rem;
+	cursor: default;
+	margin-left: 0;
+	transition: margin-left .3s ease;
+}
+
+.animated-ul li:hover {
+	margin-left: 10px;
+}
+
+.footer {
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	/*margin-top: 30px;*/
+	font-size: 14px;
+	line-height: 32px;
+	text-align: center;
+	border-top: 1px solid #e8e8e8;
+}
+
+@media (min-width: 768px) {
+	.footer-mark {
+		display: block;
+	}
+}
+
+@media (min-width: 768px) {
+	.footer-nav {
+		float: right;
+	}
+}
+
+.footer-nav-item {
+	display: inline-block;
+}
+
+.footer-nav-item + .footer-nav-item {
+	margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+	.footer-legal {
+		float: left;
+	}
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: 980px;
+}
+
+.container::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media (min-width: 544px) {
+	.container {
+		max-width: 576px;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 800px;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 980px;
+	}
+}
+
+@media (min-width: 1300px) {
+	.container {
+		max-width: 1260px;
+	}
+}
+
+.footer .copyright {
+	color: #7c9398;
+	float: left;
+}
+
+.footer-social {
+	float: right;
+}
+
+.footer-social a .fa-github {
+	font-size: 150%;
+}
+
+.footer a {
+	color: #7c9398;
+}
+
+.footer a:hover {
+	color: #3a585f;
+}
+
+.footer-spacer {
+	padding-top: 100px;
 }
