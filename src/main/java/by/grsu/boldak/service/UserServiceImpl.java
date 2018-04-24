@@ -16,19 +16,34 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+/**
+ * Servise with functions for `user` table modification
+ */
 @Service
 public class UserServiceImpl implements UserService {
-
 	@Autowired
 	private UserRepository userRepository;
 
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 
+	/**
+	 * Find user by Email in `user` table
+	 *
+	 * @param email Email as String
+	 * @return User object if user exists NULL if not exists
+	 */
 	public User findByEmail(String email) {
+		// Pass function from repository
 		return userRepository.findByEmail(email);
 	}
 
+	/**
+	 * Add new row to table
+	 *
+	 * @param registration UserRegistrationDto object which contains all required data for `user` table
+	 * @return User for check if all is ok. Useless return but reqired
+	 */
 	public User save(UserRegistrationDto registration) {
 		User user = new User();
 		user.setFirstName(registration.getFirstName());
@@ -45,6 +60,13 @@ public class UserServiceImpl implements UserService {
 		return userRepository.save(user);
 	}
 
+	/**
+	 * Override method for user authentication using bcrytp caching of password
+	 *
+	 * @param email User email in String
+	 * @return UserDetails of user account
+	 * @throws UsernameNotFoundException If e-mail is incorrect
+	 */
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		User user = userRepository.findByEmail(email);

@@ -9,11 +9,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
+/**
+ * Main controller. It will be called on each page of site
+ */
 @ControllerAdvice
 public class MainControllerAdvice {
 	@Autowired
 	private UserRepository userRepository;
 
+	/**
+	 * Main controller. It will be called on each page of site
+	 *
+	 * @param model Current Model. It will be used on page frontend to show content from site backend
+	 */
 	@ModelAttribute
 	public void addBugetToModel(Model model) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();

@@ -1,5 +1,8 @@
-package by.grsu.boldak.dto;
+package by.grsu.boldak.model;
 
+/**
+ * AdminSubmit form Model for `/admin` page
+ */
 public class AdminSubmit {
 	private String type;
 	private String email;

@@ -9,12 +9,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * Controller for `/AJAX/subjects` page. This page used to show facltys subjects name on registration page
+ */
 @Controller
 @RequestMapping("/AJAX/subjects")
 public class AjaxSubjectsCoontroller {
 	@Autowired
 	private FacultyRepository facultyRepository;
 
+	/**
+	 * Will be calld on GET requests. Returns facultys subjects names
+	 *
+	 * @param id Faculty id
+	 * @return String page body
+	 */
 	@GetMapping
 	@ResponseBody
 	public String subjects(@RequestParam(value = "id", required = false) Integer id) {

@@ -1,5 +1,8 @@
 package by.grsu.boldak.model;
 
+/**
+ * Authentication form Model for `/login` page
+ */
 public class AuthenticateForm {
 	private String username;
 	private String password;

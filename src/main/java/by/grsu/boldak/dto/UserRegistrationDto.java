@@ -4,6 +4,9 @@ import by.grsu.boldak.constraint.FieldMatch;
 
 import javax.validation.constraints.*;
 
+/**
+ * Registration data transfer oject for `user` table interaction
+ */
 @FieldMatch.List({
 		@FieldMatch(first = "password", second = "confirmPassword", message = "Пароли не совпадают"),
 })

@@ -3,40 +3,43 @@ package by.grsu.boldak.model;
 import javax.persistence.*;
 import java.util.Collection;
 
+/**
+ * `user` Table model
+ */
 @Entity
 @Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 
-    private String firstName;
-    private String lastName;
-    private String email;
-    private String password;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password;
 
-    private int faculty;
+	private int faculty;
 
 	private int mark1;
-    private int mark2;
-    private int mark3;
+	private int mark2;
+	private int mark3;
 
 	private int certificate;
 
 	private int confirmed;
 
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "users_roles",
-            joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "id"))
-    private Collection<Role> roles;
+	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinTable(
+			name = "users_roles",
+			joinColumns = @JoinColumn(
+					name = "user_id", referencedColumnName = "id"),
+			inverseJoinColumns = @JoinColumn(
+					name = "role_id", referencedColumnName = "id"))
+	private Collection<Role> roles;
 
-    public User() {
-    }
+	public User() {
+	}
 
 	public User(String firstName, String lastName, String email, String password, int faculty, int mark1, int mark2, int mark3, int certificate, int confirmed) {
 		this.firstName = firstName;
@@ -66,60 +69,60 @@ public class User {
 	}
 
 	public Integer getId() {
-        return id;
-    }
+		return id;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public int getFaculty() {
-        return faculty;
-    }
+	public int getFaculty() {
+		return faculty;
+	}
 
-    public void setFaculty(int faculty) {
-        this.faculty = faculty;
-    }
+	public void setFaculty(int faculty) {
+		this.faculty = faculty;
+	}
 
-    public Collection<Role> getRoles() {
-        return roles;
-    }
+	public Collection<Role> getRoles() {
+		return roles;
+	}
 
-    public void setRoles(Collection<Role> roles) {
-        this.roles = roles;
-    }
+	public void setRoles(Collection<Role> roles) {
+		this.roles = roles;
+	}
 
 
 	public int getMark1() {

@@ -5,6 +5,9 @@ import org.apache.commons.beanutils.BeanUtils;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+/**
+ * Field match validator. Used in passwords validation in registration form
+ */
 public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Object> {
 
 	private String firstFieldName;
