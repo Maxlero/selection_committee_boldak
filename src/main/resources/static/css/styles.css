@@ -425,6 +425,7 @@ body {
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
+    position: relative;
 
 	/* #4 AND INFINITY!!! (CSS3 only) */
 	box-shadow:
@@ -432,7 +433,7 @@ body {
 			0 0 0 15px hsl(0, 0%, 90%);
 }
 
-.face-circle img {
+.face-circle .face-rotate {
     width: 300px;
     height: 300px;
 
@@ -440,6 +441,21 @@ body {
 	transition: transform .3s ease;
 }
 
-.face-circle img:hover {
+.face-circle .face-rotate:hover {
 	transform: rotateZ(360deg);
+}
+
+.face-layer {
+	width: 300px;
+	height: 300px;
+	left: 0;
+    position: absolute;
+}
+
+.eyes-layer {
+	width: 300px;
+	height: 300px;
+	left: 0;
+    position: absolute;
+	z-index: -1;
 }

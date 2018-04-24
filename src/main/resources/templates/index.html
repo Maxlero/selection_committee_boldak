@@ -6,7 +6,7 @@
 <section id="faces">
 	<div class="faces-container-first-row">
 		<div class="left-faces">
-			<div class="faces-grid">
+			<div class="faces-grid right">
 				<div class="row text-center">
 					<div class="col-sm-6">
 						<img th:src="@{/img/faces/MaxO.png}" class="face face-1-l">
@@ -82,12 +82,13 @@
 		<div class="row text-center">
 			<div class="col-md-4">
 				<div class="face-circle">
-					<img th:src="@{/img/main/Alex2.0.jpg	}" alt="">
+					<img class="face-rotate" th:src="@{/img/main/Alex2.0.jpg}" alt="">
 				</div>
 			</div>
 			<div class="col-md-8 text-left">
 				<h3 class="text-center">Our advantages:</h3>
 				<ul>
+					<li>Our students always looks great on photos</li>
 					<li>We have Alexey</li>
 					<li>We have Maxim</li>
 					<li>We have university</li>
@@ -99,12 +100,20 @@
 			</div>
 		</div>
 		<div class="row text-center pt-5">
-			<div class="col-md-8">
-				<h3>Наши минусы</h3>
+			<div class="col-md-8 text-center">
+				<h3>Our disadvantages:</h3>
+				<ul class="text-left">
+					<li>Free education</li>
+					<li>Сonvenient schedule</li>
+					<li>Saturday - day off</li>
+					<li>Lecture notes are optional</li>
+					<li>Phiical education are optional</li>
+				</ul>
 			</div>
 			<div class="col-md-4">
 				<div class="face-circle">
-					<img th:src="@{/img/main/Max.png}" alt="">
+					<img class="face-layer" th:src="@{/img/main/Max1.png}" alt="">
+					<img id="max-eyes" class="eyes-layer" th:src="@{/img/main/Max2.png}" alt="">
 				</div>
 			</div>
 		</div>
@@ -112,5 +121,54 @@
 </section>
 <div style="padding-top: 400px;"></div>
 <div th:replace="fragments/footer :: scripts"></div>
+<script>
+	jQuery(function ($) {
+		var currentMousePos = {x: -1, y: -1};
+		var eyes = $('#max-eyes');
+		var offset = eyes.offset();
+
+		var width = $(window).width();
+		var height = $(window).height();
+
+		$(document).mousemove(function (event) {
+			currentMousePos.x = event.pageX;
+			currentMousePos.y = event.pageY;
+
+			moveEyes();
+		});
+
+		$(window).resize(function () {
+			width = $(window).width();
+			height = $(window).height();
+		});
+
+		function moveEyes() {
+			var posX = (currentMousePos.x - offset.left - eyes.width() / 2) / 400;
+			var posY = (currentMousePos.y - offset.top - eyes.height() / 2) / 400;
+
+			if (posX > 1.0)
+				posX = 1.0;
+
+			if (posX < -1.0)
+				posX = -1.0;
+
+			if (posY > 1.0)
+				posY = 1.0;
+
+			if (posY < -1.0)
+				posY = -1.0;
+
+			eyes.css({
+				'-webkit-transform' : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
+				'-moz-transform'    : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
+				'-ms-transform'     : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
+				'-o-transform'      : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)',
+				'transform'         : 'translateX(' + 6 * posX + 'px) translateY(' + (6 * posY - 3) + 'px)'
+			});
+			// console.log(6 * posX);
+			// console.log(7 * posY);
+		}
+	});
+</script>
 </body>
 </html>
