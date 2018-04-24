@@ -46,6 +46,23 @@ public class UserRegistrationDto {
 	@AssertTrue
 	private Boolean terms;
 
+	public UserRegistrationDto() {
+	}
+
+	public UserRegistrationDto(@NotEmpty String firstName, @NotEmpty String lastName, @NotEmpty String password, int faculty, @Min(0) @Max(100) int mark1, @Min(0) @Max(100) int mark2, @Min(0) @Max(100) int mark3, @Min(0) @Max(100) int certificate, @NotEmpty String confirmPassword, @Email @NotEmpty String email, @AssertTrue Boolean terms) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.password = password;
+		this.faculty = faculty;
+		this.mark1 = mark1;
+		this.mark2 = mark2;
+		this.mark3 = mark3;
+		this.certificate = certificate;
+		this.confirmPassword = confirmPassword;
+		this.email = email;
+		this.terms = terms;
+	}
+
 	public String getFirstName() {
 		return firstName;
 	}

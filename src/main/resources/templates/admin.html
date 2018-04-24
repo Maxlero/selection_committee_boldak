@@ -3,9 +3,80 @@
 <head th:replace="fragments/header :: head_info"></head>
 <body>
 <header th:replace="fragments/header :: head"></header>
-asd
-
-<div class="footer-spacer"></div>
+<div class="h-100 admin-width">
+	<div th:each="faculty : ${facultys}" class="text-center">
+		<div class="container-fluid mt-5">
+			<div class="col-md-12">
+				<h4>
+					<span th:text="${faculty.faculty}"></span>
+					<span> ( Required: </span>
+					<span th:text="${faculty.requirement}"></span>
+					<span>)</span>
+				</h4>
+				<table class="table table-hover text-center">
+					<thead class="thead-dark">
+					<tr>
+						<th class="align-middle" scope="col">Name</th>
+						<th class="align-middle" scope="col" th:text="${faculty.subject1}"></th>
+						<th class="align-middle" scope="col" th:text="${faculty.subject2}"></th>
+						<th class="align-middle" scope="col" th:text="${faculty.subject3}"></th>
+						<th class="align-middle" scope="col">Certificate</th>
+						<th class="align-middle" scope="col">Total</th>
+						<th class="align-middle" scope="col">Student?</th>
+						<th class="align-middle" scope="col">*</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr th:each="entrant : ${users}" th:if="${entrant.faculty}==${faculty.id}">
+						<td class="align-middle">
+							<span th:text="${entrant.lastName}"></span>
+							<span th:text="${entrant.firstName}"></span>
+						</td>
+						<td class="align-middle" th:text="${entrant.mark1}"></td>
+						<td class="align-middle" th:text="${entrant.mark2}"></td>
+						<td class="align-middle" th:text="${entrant.mark3}"></td>
+						<td class="align-middle" th:text="${entrant.certificate}"></td>
+						<td class="align-middle"
+							th:text="${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}"></td>
+						<td class="align-middle">
+							<div th:if="(${entrant.confirmed}==1)and(${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}>=${faculty.requirement})">
+								<i class="fas fa-check"></i>
+							</div>
+							<div th:if="(${entrant.confirmed}==-1)or((${entrant.confirmed}==1)and(${entrant.mark1}+${entrant.mark2}+${entrant.mark3}+${entrant.certificate}<${faculty.requirement}))">
+								<i class="fas fa-times"></i>
+							</div>
+							<div th:if="${entrant.confirmed}==0">
+								<i class="fas fa-question"></i>
+							</div>
+						</td>
+						<td>
+							<div class="d-ruby">
+								<form action="#" th:action="@{/admin}" th:object="${adminSubmit}" method="post">
+									<input type="text" id="type" name="type" value="accept" hidden>
+									<input type="text" id="email" name="email" th:value="${entrant.email}" hidden>
+									<button type="submit"
+											th:classappend="(${entrant.confirmed}!=0 and ${entrant.confirmed}==1)?'disabled':''"
+											class="btn btn-success">Accept
+									</button>
+								</form>
+								<form action="#" th:action="@{/admin}" th:object="${adminSubmit}" method="post">
+									<input type="text" id="type" name="type" value="decline" hidden>
+									<input type="text" id="email" name="email" th:value="${entrant.email}" hidden>
+									<button
+											type="submit"
+											th:classappend="(${entrant.confirmed}!=0 and ${entrant.confirmed}==-1)?'disabled':''"
+											class="btn btn-danger">Decline
+									</button>
+								</form>
+							</div>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
 <footer th:replace="fragments/footer :: footer"></footer>
 <div th:replace="fragments/footer :: scripts"></div>
 </body>

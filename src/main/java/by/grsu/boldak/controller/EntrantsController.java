@@ -31,25 +31,6 @@ public class EntrantsController {
     public String Entrants(Model model) {
         model.addAttribute("title", "Dimasos University - Entrants");
 
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String username = auth.getName();
-
-        if (!username.equals("anonymousUser")) {
-            User user = userRepository.findByEmail(username);
-
-            boolean admin = false;
-            for (Role role : user.getRoles()) {
-//                logger.info(user.getFaculty_());
-
-                if (role.getName().equals("ROLE_ADMIN"))
-                    admin = true;
-            }
-
-            model.addAttribute("admin", admin);
-        } else {
-            model.addAttribute("admin", false);
-        }
-
         List<User> users = userRepository.findAll();
         model.addAttribute("users", users);
 

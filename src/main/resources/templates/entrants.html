@@ -26,7 +26,8 @@
 					</tr>
 					</thead>
 					<tbody>
-					<tr th:each="entrant : ${users}" th:if="${entrant.faculty}==${faculty.id}">
+					<tr th:classappend="(${authorized} and ${entrant.email}==${account.email})?'table-active':''"
+						th:each="entrant : ${users}" th:if="${entrant.faculty}==${faculty.id}">
 						<td class="align-middle">
 							<span th:text="${entrant.lastName}"></span>
 							<span th:text="${entrant.firstName}"></span>
@@ -55,7 +56,6 @@
 		</div>
 	</div>
 </div>
-<div class="footer-spacer"></div>
 <footer th:replace="fragments/footer :: footer"></footer>
 <div th:replace="fragments/footer :: scripts"></div>
 </body>

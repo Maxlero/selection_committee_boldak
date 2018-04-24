@@ -571,3 +571,11 @@ body {
 .footer-spacer {
 	padding-top: 100px;
 }
+
+.d-ruby {
+	display: ruby;
+}
+
+.admin-width {
+	min-width: 900px;
+}
